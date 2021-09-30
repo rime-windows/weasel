@@ -45,7 +45,7 @@ BOOL RegisterProfiles()
 	ULONG cchIconFile = GetModuleFileNameW(g_hInst, achIconFile, ARRAYSIZE(achIconFile));
 	HRESULT hr;
 
-	if (IsWindows8OrGreater())
+	if (_IsWindows8OrGreater())
 	{
 		CComPtr<ITfInputProcessorProfileMgr> pInputProcessorProfileMgr;
 		hr = pInputProcessorProfileMgr.CoCreateInstance(CLSID_TF_InputProcessorProfiles, NULL, CLSCTX_ALL);
@@ -103,7 +103,7 @@ void UnregisterProfiles()
 {
 	HRESULT hr;
 
-	if (IsWindows8OrGreater())
+	if (_IsWindows8OrGreater())
 	{
 		CComPtr<ITfInputProcessorProfileMgr> pInputProcessorProfileMgr;
 		hr = pInputProcessorProfileMgr.CoCreateInstance(CLSID_TF_InputProcessorProfiles, NULL, CLSCTX_ALL);
@@ -156,7 +156,7 @@ BOOL RegisterCategories()
 	if (hr != S_OK)
 		goto Exit;
 
-	if (IsWindows8OrGreater())
+	if (_IsWindows8OrGreater())
 	{
 		hr = pCategoryMgr->RegisterCategory(c_clsidTextService, GUID_TFCAT_TIPCAP_IMMERSIVESUPPORT, c_clsidTextService);
 		if (hr != S_OK)
@@ -191,7 +191,7 @@ void UnregisterCategories()
 	if (hr != S_OK)
 		goto UnregisterExit;
 
-	if (IsWindows8OrGreater())
+	if (_IsWindows8OrGreater())
 	{
 		hr = pCategoryMgr->UnregisterCategory(c_clsidTextService, GUID_TFCAT_TIPCAP_IMMERSIVESUPPORT, c_clsidTextService);
 		if (hr != S_OK)

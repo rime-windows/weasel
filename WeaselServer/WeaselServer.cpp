@@ -30,7 +30,7 @@ typedef enum MONITOR_DPI_TYPE {
 
 int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lpstrCmdLine, int nCmdShow)
 {
-	InitVersion();
+	_InitVersion();
 
 	// Set DPI awareness (Windows 8.1+)
 	if (IsWindows8Point1OrGreater())

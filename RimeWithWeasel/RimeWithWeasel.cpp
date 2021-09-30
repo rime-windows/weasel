@@ -18,7 +18,7 @@ RimeWithWeaselHandler::RimeWithWeaselHandler(weasel::UI *ui)
 	, m_active_session(0)
 	, m_disabled(true)
 	, _UpdateUICallback(NULL)
-	, m_vista_greater(IsWindowsVistaOrGreater())
+	, m_vista_greater(_IsWindowsVistaOrGreater())
 {
 	_Setup();
 }

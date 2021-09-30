@@ -2,8 +2,8 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="UserMacros">
     <BOOST_ROOT>$BOOST_ROOT</BOOST_ROOT>
-    <PLATFORM_TOOLSET>$PLATFORM_TOOLSET</PLATFORM_TOOLSET>
-    <PYTHON_HOME>C:\Python27</PYTHON_HOME>
+    <PLATFORM_TOOLSET>v142</PLATFORM_TOOLSET>
+    <PYTHON_HOME>C:\Python39</PYTHON_HOME>
   </PropertyGroup>
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>

@@ -27,7 +27,7 @@ inline int utf8towcslen(const char* utf8_str, int utf8_len)
 
 inline std::wstring getUsername() {
 	DWORD len = 0;
-	GetUserName(NULL, &len);
+	GetUserNameW(NULL, &len);
 
 	if (len <= 0) {
 		return L"";
@@ -35,7 +35,7 @@ inline std::wstring getUsername() {
 
 	wchar_t *username = new wchar_t[len + 1];
 
-	GetUserName(username, &len);
+	GetUserNameW(username, &len);
 	if (len <= 0) {
 		delete[] username;
 		return L"";
