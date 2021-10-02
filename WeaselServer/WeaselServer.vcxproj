@@ -143,8 +143,8 @@
       <OutputFile>$(SolutionDir)\output\$(ProjectName).exe</OutputFile>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy $(SolutionDir)WinSparkle-0.7.0\Release\WinSparkle.dll $(SolutionDir)output\</Command>
+      <Message>copy WinSparkle.dll to target folder</Message>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>$(SolutionDir)/get_winsparkle.cmd</Command>
@@ -192,6 +192,10 @@
       <Command>$(SolutionDir)/get_winsparkle.cmd</Command>
       <Message>download winsparkle binary</Message>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)WinSparkle-0.7.0\x64\Release\WinSparkle.dll $(SolutionDir)output\</Command>
+      <Message>copy WinSparkle.dll to target folder</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -230,8 +234,8 @@
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy $(SolutionDir)WinSparkle-0.7.0\Release\WinSparkle.dll $(SolutionDir)output\</Command>
+      <Message>copy WinSparkle.dll to target folder</Message>
     </PostBuildEvent>
     <ProjectReference />
     <ProjectReference>
@@ -278,8 +282,8 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy $(SolutionDir)WinSparkle-0.7.0\x64\Release\WinSparkle.dll $(SolutionDir)output\</Command>
+      <Message>copy WinSparkle.dll to target folder</Message>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>$(SolutionDir)/get_winsparkle.cmd</Command>
@@ -319,8 +323,8 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy $(SolutionDir)WinSparkle-0.7.0\Release\WinSparkle.dll $(SolutionDir)output\</Command>
+      <Message>copy WinSparkle.dll to target folder</Message>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>$(SolutionDir)/get_winsparkle.cmd</Command>
@@ -360,8 +364,8 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy $(SolutionDir)WinSparkle-0.7.0\x64\Release\WinSparkle.dll $(SolutionDir)output\</Command>
+      <Message>copy WinSparkle.dll to target folder</Message>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>$(SolutionDir)/get_winsparkle.cmd</Command>

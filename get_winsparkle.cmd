@@ -9,26 +9,19 @@ set local_path=%~dp0
 Set zip_file=w.zip
 set check_file=./WinSparkle-0.7.0/include/winsparkle.h
 
-echo %CD%
-echo %~dp0
-
 if exist "%local_path%/%check_file%" (
-    echo File exists, exiting...
+    echo File %local_path%/%check_file% exists, exiting...
     goto END
 )
 
 powershell.exe -Command Invoke-WebRequest "%web_file%" -O "%local_path%/%zip_file%"
 rem echo Exit Code errorlevel is %errorlevel%
-if %errorlevel% EQU 0 (
-    goto DOWNLOAD_DONE
-) else (
+if %errorlevel% NEQ 0 (
     echo Download %web_file% failed, exiting...
     echo If you are always failed to download it, please download it manually
     echo and extract it in folder "%local_path%"
     goto END
 )
-
-:DOWNLOAD_DONE
 
 rem rundll32.exe zipfldr.dll,RouteTheCall "%local_path%/%zip_file%"
 powershell.exe -Command Expand-Archive -LiteralPath "%local_path%/%zip_file%" -DestinationPath "%local_path%." -Force
