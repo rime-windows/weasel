@@ -1,6 +1,7 @@
 Debug/
 Release/
 ReleaseHant/
+WinSparkle-0.7.0/
 /output/*.exp
 /output/*.ilk
 /output/*.iobj
